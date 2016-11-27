@@ -181,7 +181,7 @@ include("connect.inc.php");
                                         <div class='form-group'>
                                             <label for='Qoute :'>Le statut de paiement :</label>
                                             <p>";
-                                        createSelect($workOptions, $status_work,'status_work');
+                                        createSelect($payOptions, $status_pay, 'status_pay');
                                         echo "</p></div> 
                                     <p>
                 <input type='reset' value='Annuler' class='btn btn-default hoverbtn'>
