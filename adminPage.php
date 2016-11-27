@@ -175,7 +175,7 @@ include("connect.inc.php");
                                          <div class='form-group'>
                                             <label for='Qoute :'>Le statut de travail :</label>
                                             <p>";
-                                        createSelect($workOptions, $q['status_work'],'status_work');
+                                        createSelect($workOptions, $status_work,'status_work');
 //                                                <select class='selectpicker' name='status_work'>
 //                                                    <option selected value='$status_work'>$status_work</option>
 //                                                    <option>open</option>
