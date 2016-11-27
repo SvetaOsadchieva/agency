@@ -1,0 +1,205 @@
+.bg-1 {
+    background-color: white;
+    /* Green */
+    color: #ffffff;
+    position: relative;
+    top: 10%;
+    height: 90%;
+    /*    background-image: url(../img/new-york-on-black-and-white-wallpapers-Is-Cool-Wallpapers.jpg);*/
+    background-size: cover;
+    background-repeat: repeat-x;
+    padding: 0;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+}
+
+#technical {
+    background-image: url(../img/bg_service-technical.jpg);
+}
+
+#oral {
+    background-image: url(../img/bg_service_oral.jpg);
+}
+
+#art {
+    background-image: url(../img/bg_service_art.jpg);
+   
+    
+}
+
+.bg-1 h3 {
+    /*    color: #ff9393;*/
+    /*    color: #ffadad;*/
+    /*    color: #ce8484;*/
+    color: #ffffff;
+    /*    text-shadow: 1px 1px 5px #000000, 0 0 1em red;*/
+    text-shadow: 1px 1px 5px #000000, 0 0 .1em #ffffff;
+    font-size: 3em;
+    margin: 0;
+}
+
+.dark-filter {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+.bg-2 {
+    background-color: #474e5d;
+    background-color: #ffffff;
+    /* Dark Blue */
+    color: #ffffff;
+    color: #1f1f1f;
+    color: #555555;
+    text-align: justify;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 10%;
+    z-index: 1;
+}
+
+hr {
+    border-top: 1px solid #dedede;
+}
+
+.bg-2 a {
+    color: #cb3023;
+}
+
+.bg-2 a:hover {
+    color: #2377cb;
+}
+
+a>img {
+    /*    border: 3px solid #555555;*/
+    /*    border: 3px solid #9b9b9b;*/
+    /*    border: 3px solid #5787c7;*/
+    /*    border: 3px solid #c75757;*/
+    box-shadow: 0 0 10px 1px black;
+}
+
+a>img:hover {
+    box-shadow: 0 0 10px 1px #0076ff;
+}
+
+.bg-2 li {
+    font-size: 16px;
+}
+
+.circle {
+    border: 3px double #ffffff;
+    background-color: rgba(255, 255, 255, 0);
+    margin-top: 5%;
+    transition: 1s;
+    height: 0;
+    width: 0;
+    padding: 120px;
+}
+
+.glif-circle {
+    padding: 20px;
+    border-radius: 50%;
+    border: 3px double #393939;
+    color: #393939;
+    background-color: white;
+    transform: scale(2);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.steps-quote {
+    position: relative;
+/*    text-align: center;*/
+/*    margin: auto;*/
+/*    width: 60%;*/
+    padding: 0;
+    background: linear-gradient(180deg, rgba(240, 128, 56, 0) 47%, rgb(0, 0, 0) 49.1%, rgb(0, 0, 0) 50.9%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.step1{
+    text-align: left;
+}
+.step2{
+    text-align: center;
+}
+.step3{
+    text-align: right;
+}
+
+.step1,
+.step2,
+.step3 {
+    display: inline-block;
+}
+
+.step1 {
+/*    float: left;*/
+}
+
+.step3 {
+/*    float: right;*/
+}
+
+#description {
+/*    margin: 10px;*/
+    text-align: justify;
+    padding: 50px;
+    box-shadow: inset 0 0 7px .5px black;
+/*    display: none;*/
+}
+
+
+.glyphicon:hover {
+    color: #ce8484;
+    border-color: #ce8484;
+}
+
+#description h2 {
+    text-align: center;
+}
+
+form {
+    /*    box-shadow: 0 0 10px 1px black;*/
+    padding: 25px;
+    background-color: aliceblue;
+}
+
+button[type='submit'] {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #557ed9;
+    color: #ffffff;
+}
+
+.marginTop {
+    margin-top: 100px;
+}
+
+#formDescription h2 {
+    font-size: 1.2em;
+}
+
+select {
+    width: 100%;
+    border-radius: 3px;
+    height: 34px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: .8em;
+    padding-left: 10px;
+    color: #696969;
+}
+
+.form-group label{
+    font-size: .8em;
+}
+
+.logo{
+    filter: invert(100%);
+}
+   

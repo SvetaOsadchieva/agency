@@ -1,0 +1,94 @@
+.container-fluid {
+    position: relative;
+    top: 10%;
+    height: 100%;
+}
+
+table {
+    font-size: .7em;
+}
+
+body {
+    color: #333;
+/*    overflow-x: hidden;*/
+}
+
+td input {
+    border: 0px;
+    width: 70px;
+    height: 100%;
+    margin: 0;
+    padding: 0
+}
+
+.save {
+    background-color: #3aa3ff;
+    padding: 3px;
+    padding-left: 17px;
+    padding-right: 17px;
+    text-align: center;
+    border-radius: 2px;
+    color: white;
+    cursor: pointer;
+    border: 0;
+}
+
+.disabled {
+    color: #505050;
+    background-color: #b2b2b2;
+}
+
+.hideOption {
+    color: white!important;
+}
+
+tr {
+/*
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+*/
+}
+
+table{
+/*
+    opacity: 0;
+    transition: 2s;
+*/
+}
+
+h1 {
+    font-size: 3em;
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    text-align: center;
+/*
+    transform: translateY(100px);
+    opacity: 0;
+    -webkit-animation: anim-1 4s forwards;
+    animation: anim-1 4s forwards;
+*/
+}
+/*
+
+@-webkit-keyframes anim-1 {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    65% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+}
+*/

@@ -1,0 +1,27 @@
+i {
+    transform: scale(2.5);
+    margin-right: 10px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+i:hover {
+    color: #3073ad;
+}
+
+.glyphicon {
+    font-size: 2.3em;
+    top: 5px;
+}
+
+.bg-1 {
+    box-shadow: 0 0 10px 2px black;
+}
+
+img {
+    margin-bottom: 40px;
+}
+
+#contact {
+    background-image: url(../img/bg_service_art.jpg);
+}

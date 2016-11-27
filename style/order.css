@@ -1,0 +1,28 @@
+.steps-quote {
+    position: relative;
+    text-align: center;
+    display: block;
+/*    margin: auto;*/
+/*    width: 100%;*/
+    padding: 0;
+    background: linear-gradient(180deg, rgba(240, 128, 56, 0) 47%, rgb(0, 0, 0) 49.1%, rgb(0, 0, 0) 50.9%, rgba(0, 0, 0, 0) 51%, rgba(0, 0, 0, 0) 100%);
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+
+
+.step1{
+    text-align: left;
+}
+.step2,.step3{
+    text-align: center;
+}
+.step4{
+    text-align: right;
+}
+
+.bg-1{
+     background-image: url(../img/bg_service-technical.jpg);
+    background-size: cover;
+}
