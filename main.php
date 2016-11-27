@@ -19,7 +19,6 @@
 
 <?php
  
-$mainUrl = mb_strimwidth($_SERVER['PHP_SELF'], 0, 17);   
     echo"<div class='col-md-10 col-md-offset-1'>
         <div class='col-md-4'><h3>Traduction littéraire</h3><br/><a class='glyphicon glyphicon-book glif-circle' href='$mainUrl/service-art'></a></div>
         <div class='col-md-4'><h3>Traduction communication</h3><br/><a class='glyphicon glyphicon-user glif-circle' href='$mainUrl/service-oral'></a></div>
