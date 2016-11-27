@@ -65,7 +65,7 @@ include("connect.inc.php");
             switch($action) {
 //            case "?action=form_modif": formulaire("modif", $price, $time, $status_work, $status_pay, $doc, $id_qoute); break;
             case "form_modif": echo"jhkejrke"; break;
-            case "modif": maj($conn, $rUpdate); break;      
+//            case "modif": maj($conn, $rUpdate); break;      
             default : liste($conn); break;
             }
 

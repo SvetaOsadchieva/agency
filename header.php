@@ -26,7 +26,11 @@ echo
                 <link rel='stylesheet' href='../style/font-awesome.min.css'>";
     }
 	
-	switch($pathUrl) {				
+if($pathUrl){
+    echo "<link rel='stylesheet' href='../style/admin.css'>"; break;   
+}
+else{
+  	switch($pathUrl) {				
 		case "valeurs": echo "<link rel='stylesheet' href='../style/valeurs.css'></head>"; break;
 		case "ordre": echo "<link rel='stylesheet' href='../style/service.css'><link rel='stylesheet' href='../style/order.css'>"; break;		
 		case "service-oral": echo "<link rel='stylesheet' href='../style/service.css'>"; break;
@@ -34,10 +38,12 @@ echo
 		case "service-technical": echo "<link rel='stylesheet' href='../style/service.css'>"; break;
 		case "login": echo "<link rel='stylesheet' href='../style/login.css'>"; break;
 		case "adminPage": echo "<link rel='stylesheet' href='../style/admin.css'>"; break;
-        case "adminPage?action=form_modif": echo "<link rel='stylesheet' href='../style/admin.css'>"; break;    
 		case "contact": echo "<link rel='stylesheet' href='../style/service.css'>
                               <link rel='stylesheet' href='../style/contact.css'>"; break;
-	}	
+	}  
+}
+
+	
     
 echo "<body>";
      
