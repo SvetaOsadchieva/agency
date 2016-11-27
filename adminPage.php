@@ -38,7 +38,6 @@ include("connect.inc.php");
             $rUpdate = "UPDATE qoute SET price=$price, time=$time, status_work='$status_work',
             status_pay='$status_pay' WHERE id_qoute=$id_qoute";
         
-            var_dump($rUpdate);
             $action = empty($_GET["action"]) ? "" : $_GET["action"];
 //            $action = $_SERVER['REQUEST_URI'];
 //            $newUrl = parse_url($action, PHP_URL_PATH);
