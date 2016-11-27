@@ -130,9 +130,6 @@ include("connect.inc.php");
             }
         }
          function createSelect($options, $dbValue, $name){
-             var_dump($options);
-             var_dump($dbValue);
-             var_dump($name);
                 echo "<select value='$dbValue' name='$name'>";
                 foreach($options as $option){
                     if($dbValue == $option){
@@ -177,26 +174,15 @@ include("connect.inc.php");
                                          <div class='form-group'>
                                             <label for='Qoute :'>Le statut de travail :</label>
                                             <p>";
-                                        createSelect($workOptions, $status_work,'status_work');
-//                                                <select class='selectpicker' name='status_work'>
-//                                                    <option selected value='$status_work'>$status_work</option>
-//                                                    <option>open</option>
-//                                                    <option>resolved</option>
-//                                                </select>
+                                        createSelect($workOptions, $status_work,'status_work');                                           
                                         echo 
                                         "</p>                                                                        
                                         </div>
                                         <div class='form-group'>
                                             <label for='Qoute :'>Le statut de paiement :</label>
-                                            <p>
-                                                <select class='selectpicker' name='status_pay'>
-                                                    <option selected value='$status_pay'>$status_pay</option>
-                                                    <option>payed</option>
-                                                    <option>unpayed</option>
-                                                    <option>not_required</option>
-                                                </select>
-                                            </p>                                                                        
-                                        </div> 
+                                            <p>";
+                                        createSelect($workOptions, $status_work,'status_work');
+                                        echo "</p></div> 
                                     <p>
                 <input type='reset' value='Annuler' class='btn btn-default hoverbtn'>
                 <input type='submit' value='Valider' class='btn btn-default hoverbtn'>
@@ -207,8 +193,6 @@ include("connect.inc.php");
         //function execute query
                 function maj($conn, $requete){
                         $conn->exec($requete);
-                     echo "<br>Hello";
-                     var_dump($requete);
                         liste($conn);
                 }
 
