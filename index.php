@@ -17,7 +17,7 @@
     $action = $_SERVER['REQUEST_URI'];
     $newUrl = parse_url($action, PHP_URL_PATH);
     $url = substr($action, strrpos($action, '/') + 1);
-    $urlParam = parse_url($url, PHP_URL_QUERY);
+    $urlParam = parse_url($action, PHP_URL_QUERY);
     var_dump($urlParam);
     include("header.php");    
 	
