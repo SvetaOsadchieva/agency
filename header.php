@@ -26,7 +26,7 @@ echo
                 <link rel='stylesheet' href='../style/font-awesome.min.css'>";
     }
 	
-if($pathUrl){
+if($urlParam){
     echo "<link rel='stylesheet' href='../style/admin.css'>"; break;   
 }
 else{
