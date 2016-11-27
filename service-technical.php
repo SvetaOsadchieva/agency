@@ -1,7 +1,5 @@
 <div class="container-fluid bg-1 text-center" id="technical">
     <div class="dark-filter">
-       
-<!--        <div class='logo'><img src="../img/logo.png" alt="trigon"/></div>-->
         <div class="bottom">
             <h3>LA TRADUCTION TECHNIQUE: COMPRENDRE </h3>
         </div>

@@ -17,11 +17,8 @@
     color: #ffadad;
     color: #ce8484;
     color: white;
-/*   text-shadow: 1px 1px 5px #000000, 0 0 1em red;*/
     margin: 0;
 }
-
- 
 
 .dark-filter {
     height: 100%;
@@ -33,7 +30,6 @@
 .bg-2 {
     background-color: #474e5d;
     background-color: #ffffff;
-    /* Dark Blue */
     color: #ffffff;
     color: #1f1f1f;
     color: #555555;
@@ -56,10 +52,6 @@ hr {
 }
 
 a>img {
-    /*    border: 3px solid #555555;*/
-    /*    border: 3px solid #9b9b9b;*/
-    /*    border: 3px solid #5787c7;*/
-    /*    border: 3px solid #c75757;*/
     box-shadow: 0 0 10px 1px black;
 }
 
@@ -70,12 +62,3 @@ a>img:hover {
 .bg-2 li {
     font-size: 16px;
 }
-
-
-/*glyphicon glyphicon-briefcase*/
-
-
-/*glyphicon glyphicon-user*/
-
-
-/*glyphicon glyphicon-book*/

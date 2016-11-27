@@ -10,7 +10,6 @@ table {
 
 body {
     color: #333;
-/*    overflow-x: hidden;*/
 }
 
 td input {
@@ -43,18 +42,11 @@ td input {
 }
 
 tr {
-/*
-    transform: translateY(100px);
-    opacity: 0;
-    transition: 1s;
-*/
+
 }
 
 table{
-/*
-    opacity: 0;
-    transition: 2s;
-*/
+
 }
 
 h1 {
@@ -63,32 +55,4 @@ h1 {
     top: 30%;
     width: 100%;
     text-align: center;
-/*
-    transform: translateY(100px);
-    opacity: 0;
-    -webkit-animation: anim-1 4s forwards;
-    animation: anim-1 4s forwards;
-*/
 }
-/*
-
-@-webkit-keyframes anim-1 {
-    0% {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-    50% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    65% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-}
-*/

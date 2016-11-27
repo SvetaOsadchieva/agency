@@ -35,10 +35,8 @@ form button:hover {
     text-align: center;
     color: #555555;
     color: #ffffff;
-    /*    box-shadow: 0 0 5px .5px black;*/
     padding: 50px;
     padding-top: 10px;
-/*    background-color: ;*/
     border-left: 5px solid #3b96ff;
     border-left: 5px solid #ffb38a;
     border-top: 5px solid #8affae;
@@ -47,18 +45,6 @@ form button:hover {
     border-right: 5px solid #ff3030;
     border-right: 5px solid #ffb38a;
 }
-
-
-/*
-button[type='submit'] {
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    background-color: #557ed9;
-    color: #ffffff;
-}
-*/
-
 .header,
 footer {
     display: none;

@@ -11,22 +11,9 @@ include("connect.inc.php");
 ?>
 
     <div class="container-fluid">
-<!--    <h1>Bienvenue, admininstrateur</h1>-->
-<!--
-        <ul class='nav nav-pills'>
-            <li class="active"><a data-toggle="pill" href="#home">Quotes</a></li>
-            <li><a data-toggle="pill" href="#menu1">Ordre</a></li>
-        </ul>
-
-        <div class="tab-content">
-            <div class='tab-pane fade in active'>
--->
-                
-                    <?php 
+            <?php 
             $conn = new PDO("mysql:host=$host;dbname=$dbname", "$login", "$password");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-        
-            
            
             $doc=empty($_GET["doc"])?"":$_GET["doc"]; 
             $price=empty($_GET["price"])?"":$_GET["price"]; 
@@ -38,94 +25,76 @@ include("connect.inc.php");
             $rUpdate = "UPDATE qoute SET price=$price, time=$time, status_work='$status_work',
             status_pay='$status_pay' WHERE id_qoute=$id_qoute";
         
-            $action = empty($_GET["action"]) ? "" : $_GET["action"];
-//            $action = $_SERVER['REQUEST_URI'];
-//            $newUrl = parse_url($action, PHP_URL_PATH);
-//            $url = substr($action, strrpos($action, '/') + 1);
-//           
-      
+            $action = empty($_GET["action"]) ? "" : $_GET["action"]; 
             switch($action) {
                 case "form_modif": formulaire("modif", $price, $time, $status_work, $status_pay, $doc, $id_qoute); break;
                 case "modif": maj($conn, $rUpdate); break;      
                 default : liste($conn); break;
             }
 
-           
             function liste($conn){
-                
-                
-                
-            $stmt = $conn->prepare("SELECT client.first_name, client.last_name, client.email,client.tel,client.id_client, 
-                                    qoute.lang_from, qoute.lang_to, qoute.doc_type, qoute.price, qoute.time, qoute.status_work, qoute.status_work, qoute.status_pay, qoute.id_qoute,
-                                    firstlang.id_lang, firstlang.lang as langfrom, secondlang.id_lang, secondlang.lang as langto, doc, qoute_type
-                                    FROM client INNER JOIN qoute ON client.id_client=qoute.id_client
-                                    JOIN language as firstlang ON qoute.lang_from=firstlang.id_lang 
-                                    JOIN language as secondlang ON qoute.lang_to=secondlang.id_lang 
-                                    ORDER BY id_client;");
-            $stmt->execute();
-            
-          
-            
-           
-        
-            echo "<table class='table table-striped col-md-12'>
-                    <caption><em>Liste des quotes</em></caption>
-                    <tr>
-                        <th>#</th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <th>Langue de</th>
-                        <th>Langue à</th>
-                        <th>Type</th>
-                        <th>Fichier</th>
-                        <th>Devis</th>
-                        <th>Prix</th>
-                        <th>Temps</th>
-                        <th>Statut de travail</th>
-                        <th>Statut du paiement</th>
-                        <th></th>
-                    </tr>";
-                
-            $count = 0;
-            foreach($stmt as $q){
-                $count++;
-                echo "<tr>";
-                echo 
-                    "<td>".$count."</td>".
-                    "<td>".$q['first_name']."</td>".
-                    "<td>".$q['last_name']."</td>".
-                    "<td>".$q['email']."</td>".
-                    "<td>".$q['tel']."</td>".
-                    "<td>".$q['langfrom']."</td>".
-                    "<td>".$q['langto']."</td>".
-                    "<td>".$q['doc_type']."</td>".
-                    "<td>".$q['doc']."</td>".
-                    "<td>".$q['qoute_type']."</td>".
-                    "<td>".$q['price']."</td>".
-                    "<td>".$q['time']."</td>".
-                    "<td>".$q['status_work']."</td>".
-                    "<td>".$q['status_pay']."</td>";
-                    
-                    
-//                    "<td><input type='text' placeholder='--' value='".$q['price']."' name='price'></td>".
-//                    "<td><input type='text' placeholder='--' value='".$q['time']."' name='time'></td>";                    
-//                    createSelect($workOptions, $q['status_work'],'status_work');
-//                    createSelect($payOptions, $q['status_pay'], 'status_pay');
-//                    
-                    $doc=$q['doc'];
-                    $price=$q['price'];
-                    $time=$q['time'];
-                    $status_work=$q['status_work'];
-                    $status_pay=$q['status_pay'];
-                    $id_qoute=$q['id_qoute'];
-          
-                    $linkMod=$_SERVER["PHP_SELF"]."?action=form_modif&doc=$doc&price=$price&time=$time&status_work=$status_work&id_qoute=$id_qoute";
-                
-                    echo"<td><a href='$linkMod'>Modifier</a></td>";
-//                    echo "<td><input type='hidden' name='id_qoute' value='".$q['id_qoute']."'></td>";                
-                echo "</tr>";
+                $stmt = $conn->prepare("SELECT client.first_name, client.last_name, client.email,client.tel,client.id_client, 
+                                        qoute.lang_from, qoute.lang_to, qoute.doc_type, qoute.price, qoute.time, qoute.status_work, qoute.status_work, qoute.status_pay, qoute.id_qoute,
+                                        firstlang.id_lang, firstlang.lang as langfrom, secondlang.id_lang, secondlang.lang as langto, doc, qoute_type
+                                        FROM client INNER JOIN qoute ON client.id_client=qoute.id_client
+                                        JOIN language as firstlang ON qoute.lang_from=firstlang.id_lang 
+                                        JOIN language as secondlang ON qoute.lang_to=secondlang.id_lang 
+                                        ORDER BY id_client;");
+                $stmt->execute();
+
+
+
+
+
+                echo "<br><br><table class='table table-striped col-md-12'>
+                        <tr>
+                            <th>#</th>
+                            <th>Prénom</th>
+                            <th>Nom</th>
+                            <th>Email</th>
+                            <th>Contact</th>
+                            <th>Langue de</th>
+                            <th>Langue à</th>
+                            <th>Type</th>
+                            <th>Fichier</th>
+                            <th>Devis</th>
+                            <th>Prix</th>
+                            <th>Temps</th>
+                            <th>Statut de travail</th>
+                            <th>Statut du paiement</th>
+                            <th></th>
+                        </tr>";
+
+                $count = 0;
+                foreach($stmt as $q){
+                    $count++;
+                    echo "<tr>";
+                    echo 
+                        "<td>".$count."</td>".
+                        "<td>".$q['first_name']."</td>".
+                        "<td>".$q['last_name']."</td>".
+                        "<td>".$q['email']."</td>".
+                        "<td>".$q['tel']."</td>".
+                        "<td>".$q['langfrom']."</td>".
+                        "<td>".$q['langto']."</td>".
+                        "<td>".$q['doc_type']."</td>".
+                        "<td>".$q['doc']."</td>".
+                        "<td>".$q['qoute_type']."</td>".
+                        "<td>".$q['price']."</td>".
+                        "<td>".$q['time']."</td>".
+                        "<td>".$q['status_work']."</td>".
+                        "<td>".$q['status_pay']."</td>";
+                        $doc=$q['doc'];
+                        $price=$q['price'];
+                        $time=$q['time'];
+                        $status_work=$q['status_work'];
+                        $status_pay=$q['status_pay'];
+                        $id_qoute=$q['id_qoute'];
+
+                        $linkMod=$_SERVER["PHP_SELF"]."?action=form_modif&doc=$doc&price=$price&time=$time&status_work=$status_work&id_qoute=$id_qoute";
+
+                        echo"<td><a href='$linkMod'>Modifier</a></td>";
+                    echo "</tr>";
             }
         }
          function createSelect($options, $dbValue, $name){
@@ -152,9 +121,8 @@ include("connect.inc.php");
             function formulaire($action, $price, $time, $status_work, $status_pay, $doc, $id_qoute){
                 $payOptions = array("","payed","unpayed","not_required");
                 $workOptions = array("open","resolved");
-                          $link = $_SERVER["PHP_SELF"]."?action=form_modif";
-//                        $link = $_SERVER["PHP_SELF"]."?action=form_ajout";
-                        echo "<form action='$link' method='GET' class='col-md-4 col-md-offset-4'>
+                $link = $_SERVER["PHP_SELF"]."?action=form_modif";
+                        echo "<br><br><form action='$link' method='GET' class='col-md-4 col-md-offset-4'>
                                 <fieldset>
                                     <input type='hidden' name='action' value='$action' />
                                     <input type='hidden' name='id_qoute' value='$id_qoute' />
@@ -197,17 +165,5 @@ include("connect.inc.php");
 
  ?>
 
-                </table>
-            </div>
-<!--
-            <div id="menu1" class="tab-pane fade">
-                <h3>Menu 1</h3>
-                <p>Some content in menu 1.</p>
-            </div>
-
-        </div>
+        </table>
     </div>
--->
-<!--
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
