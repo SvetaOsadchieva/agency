@@ -131,6 +131,9 @@ include("connect.inc.php");
             }
         }
          function createSelect($options, $dbValue, $name){
+             var_dump($options);
+             var_dump($dbValue);
+             var_dump($name);
                 echo "<select value='$dbValue' name='$name'>";
                 foreach($options as $option){
                     if($dbValue == $option){
