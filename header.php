@@ -2,6 +2,7 @@
  
 $mainUrl = "https://$_SERVER[HTTP_HOST]/index.php";
 $pathUrl = parse_url($url, PHP_URL_PATH);
+$urlParam = parse_url($action, PHP_URL_QUERY);
 echo
 "<html lang='en'>
 
