@@ -19,7 +19,9 @@ body {
     height: 10%;
 }
 
-
+.logo img{
+    width: 30%;
+}
 
 .bottom {
     left: 0;
