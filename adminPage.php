@@ -27,7 +27,8 @@ include("connect.inc.php");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
 
         
-            
+            $payOptions = array("","payed","unpayed","not_required");
+            $workOptions = array("open","resolved");
            
             $doc=empty($_GET["doc"])?"":$_GET["doc"]; 
             $price=empty($_GET["price"])?"":$_GET["price"]; 
@@ -132,7 +133,7 @@ include("connect.inc.php");
             }
         }
          function createSelect($options, $dbValue, $name){
-                echo "<td><select value='$dbValue' name='$name'>";
+                echo "<select value='$dbValue' name='$name'>";
                 foreach($options as $option){
                     if($dbValue == $option){
                         echo "<option value='$option' selected>$option</option>";
@@ -150,7 +151,7 @@ include("connect.inc.php");
                     }
                     
                 }
-                echo "</select></td>";
+                echo "</select>";
             }
             function formulaire($action, $price, $time, $status_work, $status_pay, $doc, $id_qoute){
                           $link = $_SERVER["PHP_SELF"]."?action=form_modif";
@@ -173,13 +174,15 @@ include("connect.inc.php");
                                         </div> 
                                          <div class='form-group'>
                                             <label for='Qoute :'>Le statut de travail :</label>
-                                            <p>
-                                                <select class='selectpicker' name='status_work'>
-                                                    <option selected value='$status_work'>$status_work</option>
-                                                    <option>open</option>
-                                                    <option>resolved</option>
-                                                </select>
-                                            </p>                                                                        
+                                            <p>";
+                                        createSelect($workOptions, $q['status_work'],'status_work');
+//                                                <select class='selectpicker' name='status_work'>
+//                                                    <option selected value='$status_work'>$status_work</option>
+//                                                    <option>open</option>
+//                                                    <option>resolved</option>
+//                                                </select>
+                                        echo 
+                                        "</p>                                                                        
                                         </div>
                                         <div class='form-group'>
                                             <label for='Qoute :'>Le statut de paiement :</label>
