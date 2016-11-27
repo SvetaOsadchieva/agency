@@ -1,7 +1,7 @@
 <div class="container-fluid bg-1 text-center">
     <div class="dark-filter">
        
-        <div class='logo'><img src="../img/logo.png" alt="trigon"/></div>
+<!--        <div class='logo'><img src="../img/logo.png" alt="trigon"/></div>-->
         <div class="bottom">
             <h3>
             L'AGENCE DE TRADUCTION TRIGON<br>
