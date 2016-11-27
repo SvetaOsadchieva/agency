@@ -29,12 +29,13 @@ body {
     top: 70%;
     height: 30%;
     width: 100%;
-    color: #555555;
+    color: #000000;
     
 }
 
 .bottom h3 {
     font-size: 2em;
+    font-weight: bold;
 }
 
 .bottom h3 span {
