@@ -1,5 +1,4 @@
 <?php
-var_dump("kejfkjskjfksjk");
 echo "<footer class='col-md-12 bg-4 text-center'>
     <div class='contact col-md-3 col-md-offset-1'>
         <h4>TRIGON</h4>
