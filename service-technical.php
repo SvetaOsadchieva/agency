@@ -3,7 +3,7 @@
        
 <!--        <div class='logo'><img src="../img/logo.png" alt="trigon"/></div>-->
         <div class="bottom">
-            <h3>LA TRADUCTION TECHNIQUE: COMPRENDRE <br>LE FONCTIONNEMENT DE VOS PRODUITS</h3>
+            <h3>LA TRADUCTION TECHNIQUE: COMPRENDRE </h3>
         </div>
     </div>
 </div>
