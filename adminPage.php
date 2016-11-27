@@ -174,7 +174,7 @@ include("connect.inc.php");
                                          <div class='form-group'>
                                             <label for='Qoute :'>Le statut de travail :</label>
                                             <p>
-                                                <select class='selectpicker'>
+                                                <select class='selectpicker' name='status_work'>
                                                     <option selected value='$status_work'>$status_work</option>
                                                     <option>open</option>
                                                     <option>resolved</option>
@@ -184,7 +184,7 @@ include("connect.inc.php");
                                         <div class='form-group'>
                                             <label for='Qoute :'>Le statut de paiement :</label>
                                             <p>
-                                                <select class='selectpicker'>
+                                                <select class='selectpicker' name='status_pay'>
                                                     <option selected value='$status_pay'>$status_pay</option>
                                                     <option>payed</option>
                                                     <option>unpayed</option>
