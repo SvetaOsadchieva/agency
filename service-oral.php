@@ -3,7 +3,7 @@
        
 <!--        <div class='logo'><img src="../img/logo.png" alt="trigon"/></div>-->
         <div class="bottom">
-            <h3>SERVICES D’INTERPRÉTATION DE CONFÉRENCE <br> INTERPRÈTES DE CONFÉRENCE</h3>
+            <h3>SERVICES D’INTERPRÉTATION DE CONFÉRENCE</h3>
         </div>
     </div>
 </div>
