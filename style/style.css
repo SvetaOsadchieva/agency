@@ -16,7 +16,6 @@ body {
     width: 100%;
     z-index: 9999;
     opacity: .95;
-    height: 10%;
 }
 
 .logo img{
@@ -60,8 +59,7 @@ p {
     background-color: white;
     color: #ffffff;
     position: relative;
-    top: 10%;
-    height: 90%;
+    height: 100%;
     background-image: url(../img/main.jpg);
     background-size: cover;
 /*
