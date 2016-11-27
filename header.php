@@ -1,9 +1,7 @@
 <?php
  
-$mainUrl = mb_strimwidth($_SERVER['PHP_SELF'], 0, 21);
-
-//$mainUrl = mb_strimwidth($_SERVER['PHP_SELF'], 0, strlen($_SERVER['PHP_SELF'])-strlen(parse_url($url, PHP_URL_PATH))-1);
-
+$mainUrl = "https://$_SERVER[HTTP_HOST]/index.php";
+$pathUrl = parse_url($url, PHP_URL_PATH);
 echo
 "<html lang='en'>
 
@@ -17,8 +15,7 @@ echo
     
    
     $action = $_SERVER['REQUEST_URI'];
-    $url = substr($action, strrpos($action, '/') + 1);
-//    $mainUrl = mb_strimwidth($_SERVER['PHP_SELF'], 0, strlen($action)-strlen($url)-1);
+//    $url = substr($action, strrpos($action, '/') + 1);
 
     if($url == "index.php"){
         echo "<link rel='stylesheet' href='./style/style.css'>
@@ -29,7 +26,7 @@ echo
                 <link rel='stylesheet' href='../style/font-awesome.min.css'>";
     }
 	
-	switch($url) {				
+	switch($pathUrl) {				
 		case "valeurs": echo "<link rel='stylesheet' href='../style/valeurs.css'></head>"; break;
 		case "ordre": echo "<link rel='stylesheet' href='../style/service.css'><link rel='stylesheet' href='../style/order.css'>"; break;		
 		case "service-oral": echo "<link rel='stylesheet' href='../style/service.css'>"; break;
