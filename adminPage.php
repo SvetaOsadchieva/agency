@@ -21,25 +21,7 @@ include("connect.inc.php");
         <div class="tab-content">
             <div class='tab-pane fade in active'>
 -->
-                <table class='table table-striped col-md-12'>
-                    <caption><em>Liste des quotes</em></caption>
-                    <tr>
-                        <th>#</th>
-                        <th>Prénom</th>
-                        <th>Nom</th>
-                        <th>Email</th>
-                        <th>Contact</th>
-                        <th>Langue de</th>
-                        <th>Language to</th>
-                        <th>Langue à</th>
-                        <th>Fichier</th>
-                        <th>Devis</th>
-                        <th>Prix</th>
-                        <th>Temps</th>
-                        <th>Statut de travail</th>
-                        <th>Statut du paiement</th>
-                        <th></th>
-                    </tr>
+                
                     <?php 
             $conn = new PDO("mysql:host=$host;dbname=$dbname", "$login", "$password");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
@@ -61,16 +43,19 @@ include("connect.inc.php");
 //            $action = $_SERVER['REQUEST_URI'];
 //            $newUrl = parse_url($action, PHP_URL_PATH);
 //            $url = substr($action, strrpos($action, '/') + 1);
-//                 
+//           
+      
             switch($action) {
-//            case "?action=form_modif": formulaire("modif", $price, $time, $status_work, $status_pay, $doc, $id_qoute); break;
-            case "form_modif": echo"jhkejrke"; break;
-//            case "modif": maj($conn, $rUpdate); break;      
-            default : liste($conn); break;
+                case "form_modif": formulaire("modif", $price, $time, $status_work, $status_pay, $doc, $id_qoute); break;
+                case "modif": maj($conn, $rUpdate); break;      
+                default : liste($conn); break;
             }
 
            
             function liste($conn){
+                
+                
+                
             $stmt = $conn->prepare("SELECT client.first_name, client.last_name, client.email,client.tel,client.id_client, 
                                     qoute.lang_from, qoute.lang_to, qoute.doc_type, qoute.price, qoute.time, qoute.status_work, qoute.status_work, qoute.status_pay, qoute.id_qoute,
                                     firstlang.id_lang, firstlang.lang as langfrom, secondlang.id_lang, secondlang.lang as langto, doc, qoute_type
@@ -85,6 +70,26 @@ include("connect.inc.php");
             
            
         
+            echo "<table class='table table-striped col-md-12'>
+                    <caption><em>Liste des quotes</em></caption>
+                    <tr>
+                        <th>#</th>
+                        <th>Prénom</th>
+                        <th>Nom</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Langue de</th>
+                        <th>Language to</th>
+                        <th>Langue à</th>
+                        <th>Fichier</th>
+                        <th>Devis</th>
+                        <th>Prix</th>
+                        <th>Temps</th>
+                        <th>Statut de travail</th>
+                        <th>Statut du paiement</th>
+                        <th></th>
+                    </tr>";
+                
             $count = 0;
             foreach($stmt as $q){
                 $count++;
