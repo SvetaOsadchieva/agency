@@ -31,7 +31,7 @@ include("connect.inc.php");
            
             $doc=empty($_GET["doc"])?"":$_GET["doc"]; 
             $price=empty($_GET["price"])?"":$_GET["price"]; 
-            $time=empty($_GET["time"])?"":$_GET["codetimemat"]; 
+            $time=empty($_GET["time"])?"":$_GET["time"]; 
             $status_work=empty($_GET["status_work"])?"":$_GET["status_work"]; 
             $status_pay=empty($_GET["status_pay"])?"":$_GET["status_pay"]; 
             $id_qoute=empty($_GET["id_qoute"])?"":$_GET["id_qoute"]; 
