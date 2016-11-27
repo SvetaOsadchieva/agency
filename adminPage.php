@@ -26,8 +26,7 @@ include("connect.inc.php");
             $conn = new PDO("mysql:host=$host;dbname=$dbname", "$login", "$password");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
         
-            $payOptions = array("","payed","unpayed","not_required");
-            $workOptions = array("open","resolved");
+            
            
             $doc=empty($_GET["doc"])?"":$_GET["doc"]; 
             $price=empty($_GET["price"])?"":$_GET["price"]; 
@@ -155,6 +154,8 @@ include("connect.inc.php");
                 echo "</select>";
             }
             function formulaire($action, $price, $time, $status_work, $status_pay, $doc, $id_qoute){
+                $payOptions = array("","payed","unpayed","not_required");
+                $workOptions = array("open","resolved");
                           $link = $_SERVER["PHP_SELF"]."?action=form_modif";
 //                        $link = $_SERVER["PHP_SELF"]."?action=form_ajout";
                         echo "<form action='$link' method='GET' class='col-md-4 col-md-offset-4'>
