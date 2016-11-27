@@ -77,8 +77,8 @@ include("connect.inc.php");
                         <th>Email</th>
                         <th>Contact</th>
                         <th>Langue de</th>
-                        <th>Language to</th>
                         <th>Langue à</th>
+                        <th>Type</th>
                         <th>Fichier</th>
                         <th>Devis</th>
                         <th>Prix</th>
