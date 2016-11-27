@@ -25,7 +25,6 @@ include("connect.inc.php");
                     <?php 
             $conn = new PDO("mysql:host=$host;dbname=$dbname", "$login", "$password");
             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
-
         
             $payOptions = array("","payed","unpayed","not_required");
             $workOptions = array("open","resolved");
@@ -67,8 +66,7 @@ include("connect.inc.php");
                                     ORDER BY id_client;");
             $stmt->execute();
             
-            $payOptions = array("","payed","unpayed","not_required");
-            $workOptions = array("open","resolved");
+          
             
            
         
