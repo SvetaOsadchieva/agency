@@ -19,7 +19,7 @@ echo
     $action = $_SERVER['REQUEST_URI'];
 //    $url = substr($action, strrpos($action, '/') + 1);
 
-    if($url == "index.php"){
+    if($pathUrl == "index.php"){
         echo "<link rel='stylesheet' href='./style/style.css'>
               <link rel='stylesheet' href='./style/font-awesome.min.css'>";
     }
@@ -29,7 +29,7 @@ echo
     }
 	
 if($urlParam){
-    echo "<link rel='stylesheet' href='../style/admin.css'>"; break;   
+    echo "<link rel='stylesheet' href='../style/admin.css'>";   
 }
 else{
   	switch($pathUrl) {				
